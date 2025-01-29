@@ -25,11 +25,10 @@ Preparation:
 * Secrets for CLI password and connection override credentials should be stored in the Github Actions secrets and variables section of your repo. A deployment manager should set these up
   ![Image](https://i.imgur.com/w9NRrOw.png)
 * Your project folder should contain:
-  * A `manifest.json` file that you should create that will be edited with each current project version number to promote
+  * Your project export
   * A json file with the connection(s) export (e.g. `ampint project connection override get -n LBclitest -cn "http server" > httpserver.json`)
     * Replace the credentials in the connection export with environment variables as we assign github secrets to these env variables in the pipeline
       ![Image](https://i.imgur.com/Q6f5LcS.png)
-  * The project export zip file (for backup purposes)
   * The Github action contained in `.github/workflows/deploymentpipeline.yml`. It will run and promote the project to LIVE whenever you check your project in (Push Origin)
 
 DevOps Flow:
