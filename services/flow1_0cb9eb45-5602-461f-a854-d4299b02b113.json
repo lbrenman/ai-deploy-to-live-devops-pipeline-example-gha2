@@ -10,11 +10,11 @@
   "service_output_json_schema" : null,
   "type" : "EVENTDRIVEN",
   "error_handler" : false,
-  "tag" : "V31",
+  "tag" : "V32",
   "active" : false,
   "is_changed" : true,
   "comment" : "Update",
-  "base_tag" : "V30",
+  "base_tag" : "V31",
   "test_input" : {
     "type" : "jsonb",
     "value" : "[]",
