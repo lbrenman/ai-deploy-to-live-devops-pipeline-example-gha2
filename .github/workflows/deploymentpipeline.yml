@@ -43,14 +43,14 @@ jobs:
         run: |
           PROJECT_VERSION=$(jq -r '.projects[] | select(.projectName=="LBclitest") | .projectVersion | ltrimstr("V")' metadata.json)
           echo "Extracted projectVersion: $PROJECT_VERSION"
-          echo PROJECT_VERSION >> $GITHUB_ENV
+          echo "PROJECT_VERSION=$PROJECT_VERSION" >> $GITHUB_ENV
       
       - shell: bash
         run: |
           ls -al
           curl -o ampint.jar ${{env.CLI_DOWNLOAD_URL}}
           chmod +x ampint.jar
-          echo "PROJECT_VERSION=$PROJECT_VERSION" >> $GITHUB_ENV
+          echo "$PROJECT_VERSION"
 
       - name: Login into Amplify Integration Tenant
         run: java -jar ampint.jar auth login -u ${{env.CLI_USERNAME}} -p ${{secrets.CLI_PASSWORD}} --url ${{env.AI_TENANT_URL}}
