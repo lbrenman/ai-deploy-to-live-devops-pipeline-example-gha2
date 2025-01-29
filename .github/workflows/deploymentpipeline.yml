@@ -1,0 +1,89 @@
+name: Promote Project to Live and Run
+
+# Controls when the workflow will run
+on: 
+  # Triggers the workflow on push or pull request events but only for the "master" branch
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+env:
+  # Set these accordingly
+  CLI_USERNAME: leor.brenman@gmail.com
+  CLI_DOWNLOAD_URL: https://lbfiletest.s3.amazonaws.com/aiclitest2/ampint.jar
+  AI_TENANT_URL: https://axway-appc-se.sandbox.ampint.axwaytest.net
+  AI_PROJECT_NAME: LBclitest
+  AI_INTEGRATION_NAME: flow1
+  AI_DP_NAME: Shared Data Plane
+  # Leave these empty
+  PROJECT_VERSION:
+  DEPLOYJOBNAME:
+  PROJPROJVERSION:
+  
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v2
+        with:
+          java-version: 17
+          distribution: zulu
+      
+      - name: Install jq
+        run: sudo apt-get install -y jq
+
+      - name: Read and parse JSON file
+        id: parse_json
+        run: |
+          json_content=$(cat manifest.json)
+          version=$(echo "$json_content" | jq -r '.version')
+          echo "Version: $version"
+          echo "PROJECT_VERSION=${version}" >> $GITHUB_ENV
+      
+      - shell: bash
+        run: |
+          ls -al
+          curl -o ampint.jar ${{env.CLI_DOWNLOAD_URL}}
+          chmod +x ampint.jar
+          echo "$PROJECT_VERSION"
+
+      - name: Login into Amplify Integration Tenant
+        run: java -jar ampint.jar auth login -u ${{env.CLI_USERNAME}} -p ${{secrets.CLI_PASSWORD}} --url ${{env.AI_TENANT_URL}}
+
+      - name: Create Deploy Job vars
+        run: |
+          echo "DEPLOYJOBNAME=${{ format('{0}{1}{2}', env.AI_PROJECT_NAME, '_dj_v', env.PROJECT_VERSION) }}" >> $GITHUB_ENV
+          echo "PROJPROJVERSION=${{ format('{0}{1}{2}', env.AI_PROJECT_NAME, ',V', env.PROJECT_VERSION) }}" >> $GITHUB_ENV
+          
+      - name: Create Deployment Job
+        run: java -jar ampint.jar deployment create -n ${{env.DEPLOYJOBNAME}} -d "Deployment Job" -pv ${{env.PROJPROJVERSION}}
+
+      - name: Set mode to LIVE
+        run: java -jar ampint.jar environment switch -n LIVE
+
+      - name: Disable event
+        run: java -jar ampint.jar project event disable -n ${{env.AI_PROJECT_NAME}} -in ${{env.AI_INTEGRATION_NAME}} -cn "${{env.AI_DP_NAME}}"
+
+      - name: Override Connection in LIVE
+        env:
+          connection_username: ${{secrets.CONNECTION_LIVE_USERNAME}}
+          connection_password: ${{secrets.CONNECTION_LIVE_PASSWORD}}
+        run: java -jar ampint.jar project connection override import -i httpserver.json
+
+      - name: Set mode to DESIGN
+        run: java -jar ampint.jar environment switch -n DESIGN
+
+      - name: Run Deployment Job
+        run: java -jar ampint.jar deployment run -n ${{env.DEPLOYJOBNAME}} -e LIVE
+          
+      - name: Set mode to LIVE
+        run: java -jar ampint.jar environment switch -n LIVE
+
+      - name: Enable event
+        run: java -jar ampint.jar project event enable -n ${{env.AI_PROJECT_NAME}} -in ${{env.AI_INTEGRATION_NAME}} -cn "${{env.AI_DP_NAME}}"
