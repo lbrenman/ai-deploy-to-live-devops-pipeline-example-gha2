@@ -1,0 +1,10 @@
+{
+  "urls" : "axway-appc-se-check.sandbox.ampint.axwaytest.net,axway-appc-se-design.sandbox.ampint.axwaytest.net,axway-appc-se-live.sandbox.ampint.axwaytest.net",
+  "domains" : "cx52-c,cx52-d,cx52-l",
+  "projects" : [ {
+    "projectId" : "f711dbbf-9ac5-4395-b9d4-02ea2f90f77d",
+    "projectName" : "LBclitest",
+    "projectVersion" : "V30",
+    "projectType" : "Fusion"
+  } ]
+}
