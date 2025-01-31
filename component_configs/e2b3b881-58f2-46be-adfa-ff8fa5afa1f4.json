@@ -40,7 +40,7 @@
   "config_document_id" : null,
   "add_variables" : {
     "type" : "jsonb",
-    "value" : "[{\"id\": \"85bb2c2a-8f43-4027-bf95-a61c2268cf86\", \"key\": \"/HTTPSServerGetOutput\", \"type\": \"object\", \"title\": \"HTTPSServerGetOutput\", \"children\": [{\"id\": \"0609e80a-d8e6-46f0-83fe-6114747bdfb1\", \"key\": \"/HTTPSServerGetOutput/pathParams\", \"type\": \"object\", \"title\": \"pathParams\", \"children\": [], \"editAllow\": false, \"childrenSet\": false, \"hasChildren\": true, \"dataElementType\": \"document\", \"encryption_required\": false}, {\"id\": \"999c2f11-d3c5-4b33-bacf-1e294c9ca881\", \"key\": \"/HTTPSServerGetOutput/queryParams\", \"type\": \"object\", \"title\": \"queryParams\", \"children\": [], \"editAllow\": false, \"childrenSet\": false, \"hasChildren\": true, \"dataElementType\": \"document\", \"encryption_required\": false}, {\"id\": \"30306099-1950-47ec-be5f-e186f36226b4\", \"key\": \"/HTTPSServerGetOutput/headers\", \"type\": \"object\", \"title\": \"headers\", \"children\": [], \"editAllow\": false, \"childrenSet\": false, \"hasChildren\": true, \"dataElementType\": \"document\", \"encryption_required\": false}], \"editAllow\": false, \"childrenSet\": false, \"hasChildren\": true, \"dataElementType\": \"document\", \"encryption_required\": false}]",
+    "value" : "[{\"id\": \"9972536d-3e70-4f25-b878-ed0878f0652a\", \"key\": \"/HTTPSServerGetOutput\", \"type\": \"object\", \"title\": \"HTTPSServerGetOutput\", \"children\": [{\"id\": \"4305e216-8443-4b9e-a3de-8e1af9e134e7\", \"key\": \"/HTTPSServerGetOutput/pathParams\", \"type\": \"object\", \"title\": \"pathParams\", \"children\": [], \"editAllow\": false, \"childrenSet\": false, \"hasChildren\": true, \"dataElementType\": \"document\", \"encryption_required\": false}, {\"id\": \"909b0e5d-4c6b-49ee-8bbb-726877a9ee73\", \"key\": \"/HTTPSServerGetOutput/queryParams\", \"type\": \"object\", \"title\": \"queryParams\", \"children\": [], \"editAllow\": false, \"childrenSet\": false, \"hasChildren\": true, \"dataElementType\": \"document\", \"encryption_required\": false}, {\"id\": \"c3119c6a-17c3-4a60-ac62-71ff1de3efb9\", \"key\": \"/HTTPSServerGetOutput/headers\", \"type\": \"object\", \"title\": \"headers\", \"children\": [], \"editAllow\": false, \"childrenSet\": false, \"hasChildren\": true, \"dataElementType\": \"document\", \"encryption_required\": false}], \"editAllow\": false, \"childrenSet\": false, \"hasChildren\": true, \"dataElementType\": \"document\", \"encryption_required\": false}]",
     "null" : false
   },
   "drop_variables" : null,
@@ -49,15 +49,15 @@
   "config_plug_id" : null,
   "override_plug" : false,
   "config_java_service_id" : null,
-  "service_tag" : "V34",
+  "service_tag" : "V35",
   "endpoint_tag" : "EMPTY",
   "config_service_tag" : null,
   "config_imap_tag" : null,
   "config_b2b_document_type_tag" : null,
   "active" : false,
-  "parent_component_config_service_tag" : "V34",
+  "parent_component_config_service_tag" : "V35",
   "service_project_id" : "f711dbbf-9ac5-4395-b9d4-02ea2f90f77d",
-  "service_project_tag" : "V34",
+  "service_project_tag" : "V35",
   "config_service_project_id" : null,
   "config_service_project_tag" : null,
   "config_imap_project_id" : null,
@@ -75,7 +75,7 @@
   "disabled" : false,
   "config" : {
     "type" : "json",
-    "value" : "{\"resourceParams\":[{\"type\":\"resourceParams\",\"id\":\"777bd48a-f527-4291-b8ee-0d69215ac7bb\",\"value\":\"lbtest\",\"order\":8}],\"pathListParams\":[{\"type\":\"pathListParams\",\"id\":\"c20132da-d6cb-48ac-803b-34a60bf5fed3\",\"value\":null}],\"queryParams\":[],\"headers\":[],\"url\":\"https://axway-appc-se-design.sandbox.ampint.axwaytest.net:9443/lbtest\",\"resourcePath\":\"/lbtest\",\"body\":\"hello from v34\",\"status\":null,\"isAsync\":true,\"contentType\":\"text/plain\",\"pathParams\":[]}",
+    "value" : "{\"resourceParams\":[{\"type\":\"resourceParams\",\"id\":\"777bd48a-f527-4291-b8ee-0d69215ac7bb\",\"value\":\"lbtest\",\"order\":8}],\"pathListParams\":[{\"type\":\"pathListParams\",\"id\":\"c20132da-d6cb-48ac-803b-34a60bf5fed3\",\"value\":null}],\"queryParams\":[],\"headers\":[],\"url\":\"https://axway-appc-se-design.sandbox.ampint.axwaytest.net:9443/lbtest\",\"resourcePath\":\"/lbtest\",\"body\":\"hello from v35\",\"status\":null,\"isAsync\":true,\"contentType\":\"text/plain\",\"pathParams\":[]}",
     "null" : false
   },
   "config_b2b_document_type_project_mode_id" : "112c1cb8-4b9e-4d1a-a042-0bd031dc7d05",
