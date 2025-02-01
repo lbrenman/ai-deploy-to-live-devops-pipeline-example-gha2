@@ -1,0 +1,26 @@
+{
+  "id" : "4f104f13-7597-499e-9577-fcdc2be0d08b",
+  "name" : "http server",
+  "description" : "http server",
+  "connection_config" : "{\"112c1cb8-4b9e-4d1a-a042-0bd031dc7d05\":{\"HTTPSEndpoint\":{\"id\":null,\"name\":\"http server\",\"retry\":{\"count\":3,\"afterMs\":100},\"active\":true,\"client\":{\"id\":null},\"details\":{\"url\":null,\"port\":\"9443\",\"httpVersion\":\"HTTP_2\",\"acceptedTLSVersions\":null,\"sslPublicCertificate\":{\"certificate\":null}},\"partners\":[{}],\"protocol\":\"HTTPS\",\"direction\":\"INCOMING\",\"description\":\"http server\",\"certificateId\":null,\"authentication\":{\"type\":\"BASIC\",\"user\":\"abcd\",\"token\":null,\"scopes\":null,\"headers\":[],\"password\":\"1234\",\"resource\":null,\"client_id\":null,\"token_url\":null,\"access_key\":null,\"aws_region\":null,\"grant_type\":null,\"privateKey\":null,\"proxy_host\":null,\"proxy_port\":null,\"secret_key\":null,\"token_type\":null,\"certificate\":null,\"api_key_name\":null,\"service_name\":null,\"api_key_value\":null,\"authorize_url\":null,\"client_secret\":null,\"proxy_enabled\":\"None\",\"session_token\":null,\"proxy_password\":null,\"proxy_protocol\":null,\"proxy_username\":null,\"responseTimeout\":120000,\"api_key_location\":null,\"safe_resource_path\":null,\"optional_parameters\":[],\"privateKeyPassphrase\":null,\"proxy_authentication\":null,\"aws_signature_location\":null,\"usePersistentConnections\":true,\"authorization_header_name\":null,\"authorization_header_prefix\":null,\"client_credentials_location\":null},\"sslPublickeyId\":null,\"isSSLCertificate\":false,\"connectionTimeoutInMS\":120000}},\"81e359da-9454-40ba-b968-1273a3b8e37b\":{\"HTTPSEndpoint\":{\"id\":null,\"name\":\"http server\",\"retry\":{\"count\":3,\"afterMs\":100},\"active\":true,\"client\":{\"id\":null},\"details\":{\"url\":null,\"port\":0,\"httpVersion\":\"HTTP_2\",\"acceptedTLSVersions\":null,\"sslPublicCertificate\":{\"certificate\":null}},\"partners\":[{}],\"protocol\":null,\"direction\":\"INCOMING\",\"description\":\"http server\",\"certificateId\":null,\"authentication\":{\"type\":\"NONE\",\"user\":null,\"token\":null,\"scopes\":null,\"headers\":[],\"password\":null,\"resource\":null,\"client_id\":null,\"token_url\":null,\"access_key\":null,\"aws_region\":null,\"grant_type\":null,\"privateKey\":null,\"proxy_host\":null,\"proxy_port\":null,\"secret_key\":null,\"token_type\":null,\"certificate\":null,\"api_key_name\":null,\"service_name\":null,\"api_key_value\":null,\"authorize_url\":null,\"client_secret\":null,\"proxy_enabled\":\"None\",\"session_token\":null,\"proxy_password\":null,\"proxy_protocol\":null,\"proxy_username\":null,\"responseTimeout\":120000,\"api_key_location\":null,\"safe_resource_path\":null,\"optional_parameters\":[],\"privateKeyPassphrase\":null,\"proxy_authentication\":null,\"aws_signature_location\":null,\"usePersistentConnections\":true,\"authorization_header_name\":null,\"authorization_header_prefix\":null,\"client_credentials_location\":null},\"sslPublickeyId\":null,\"isSSLCertificate\":false,\"connectionTimeoutInMS\":120000}},\"bdf2e4f5-a195-40b5-a82a-1d76ab30e077\":{\"HTTPSEndpoint\":{\"id\":null,\"name\":\"http server\",\"retry\":{\"count\":3,\"afterMs\":100},\"active\":true,\"client\":{\"id\":null},\"details\":{\"url\":null,\"port\":0,\"httpVersion\":\"HTTP_2\",\"acceptedTLSVersions\":null,\"sslPublicCertificate\":{\"certificate\":null}},\"partners\":[{}],\"protocol\":null,\"direction\":\"INCOMING\",\"description\":\"http server\",\"certificateId\":null,\"authentication\":{\"type\":\"NONE\",\"user\":null,\"token\":null,\"scopes\":null,\"headers\":[],\"password\":null,\"resource\":null,\"client_id\":null,\"token_url\":null,\"access_key\":null,\"aws_region\":null,\"grant_type\":null,\"privateKey\":null,\"proxy_host\":null,\"proxy_port\":null,\"secret_key\":null,\"token_type\":null,\"certificate\":null,\"api_key_name\":null,\"service_name\":null,\"api_key_value\":null,\"authorize_url\":null,\"client_secret\":null,\"proxy_enabled\":\"None\",\"session_token\":null,\"proxy_password\":null,\"proxy_protocol\":null,\"proxy_username\":null,\"responseTimeout\":120000,\"api_key_location\":null,\"safe_resource_path\":null,\"optional_parameters\":[],\"privateKeyPassphrase\":null,\"proxy_authentication\":null,\"aws_signature_location\":null,\"usePersistentConnections\":true,\"authorization_header_name\":null,\"authorization_header_prefix\":null,\"client_credentials_location\":null},\"sslPublickeyId\":null,\"isSSLCertificate\":false,\"connectionTimeoutInMS\":120000}}}",
+  "endpoint_type_id" : "fdfb0a1b-7b1e-46c8-ae26-b883f3c1c8bb",
+  "enabled" : true,
+  "bean_name" : "HTTPSServer-4f104f13-7597-499e-9577-fcdc2be0d08b",
+  "status" : {
+    "type" : "jsonb",
+    "value" : "{\"112c1cb8-4b9e-4d1a-a042-0bd031dc7d05\": true, \"81e359da-9454-40ba-b968-1273a3b8e37b\": true, \"bdf2e4f5-a195-40b5-a82a-1d76ab30e077\": true}",
+    "null" : false
+  },
+  "auth_token_config" : {
+    "type" : "jsonb",
+    "value" : "{}",
+    "null" : false
+  },
+  "avatar_id" : null,
+  "tag" : "V42",
+  "active" : false,
+  "is_changed" : false,
+  "comment" : "Update to V42",
+  "is_error" : false,
+  "base_tag" : "V41"
+}

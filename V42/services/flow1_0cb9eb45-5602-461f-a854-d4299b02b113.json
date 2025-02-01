@@ -1,0 +1,28 @@
+{
+  "id" : "0cb9eb45-5602-461f-a854-d4299b02b113",
+  "name" : "flow1",
+  "description" : "flow1",
+  "iserror" : false,
+  "no_of_errors" : 0,
+  "service_input" : null,
+  "service_output" : null,
+  "service_input_json_schema" : null,
+  "service_output_json_schema" : null,
+  "type" : "EVENTDRIVEN",
+  "error_handler" : false,
+  "tag" : "V42",
+  "active" : false,
+  "is_changed" : true,
+  "comment" : "Update to V42",
+  "base_tag" : "V41",
+  "test_input" : {
+    "type" : "jsonb",
+    "value" : "[]",
+    "null" : false
+  },
+  "test_input_structure" : {
+    "type" : "jsonb",
+    "value" : "[]",
+    "null" : false
+  }
+}
