@@ -7,10 +7,10 @@
   "service_project_id" : "f711dbbf-9ac5-4395-b9d4-02ea2f90f77d",
   "service_project_tag" : "V32",
   "active" : false,
-  "service_project_mode_id" : "bdf2e4f5-a195-40b5-a82a-1d76ab30e077",
+  "service_project_mode_id" : "112c1cb8-4b9e-4d1a-a042-0bd031dc7d05",
   "is_info_id" : null,
   "url" : null,
-  "type" : null,
+  "type" : "Application-Get",
   "event_config" : null,
   "runtime_id" : null
 }
