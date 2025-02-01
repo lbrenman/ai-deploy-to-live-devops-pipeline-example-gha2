@@ -13,8 +13,6 @@ on:
 
 env:
   # Set these accordingly
-  CLI_USERNAME: leor.brenman@gmail.com
-  CLI_DOWNLOAD_URL: ${{secrets.CLI_DOWNLOAD_URL}}
   AI_TENANT_URL: https://axway-appc-se.sandbox.ampint.axwaytest.net
   AI_PROJECT_NAME: LBclitest
   AI_INTEGRATION_NAME: flow1
@@ -48,12 +46,12 @@ jobs:
       - shell: bash
         run: |
           ls -al
-          curl -o ampint.jar ${{env.CLI_DOWNLOAD_URL}}
+          curl -o ampint.jar ${{secrets.CLI_DOWNLOAD_URL}}
           chmod +x ampint.jar
           echo "$PROJECT_VERSION"
 
       - name: Login into Amplify Integration Tenant
-        run: java -jar ampint.jar auth login -u ${{env.CLI_USERNAME}} -p ${{secrets.CLI_PASSWORD}} --url ${{env.AI_TENANT_URL}}
+        run: java -jar ampint.jar auth login -u ${{secrets.CLI_USERNAME}} -p ${{secrets.CLI_PASSWORD}} --url ${{env.AI_TENANT_URL}}
 
       - name: Create Deploy Job vars
         run: |
