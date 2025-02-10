@@ -39,7 +39,7 @@ jobs:
       - name: Read and parse JSON file
         id: parse_json
         run: |
-          PROJECT_VERSION=$(jq -r '.projects[] | select(.projectName=="LBclitest") | .projectVersion | ltrimstr("V")' metadata.json)
+          PROJECT_VERSION=$(jq -r '.projects[] | select(.projectName=="${{env.AI_PROJECT_NAME}}") | .projectVersion | ltrimstr("V")' ${{env.AI_PROJECT_NAME}}/metadata.json)
           echo "Extracted projectVersion: $PROJECT_VERSION"
           echo "PROJECT_VERSION=$PROJECT_VERSION" >> $GITHUB_ENV
       
