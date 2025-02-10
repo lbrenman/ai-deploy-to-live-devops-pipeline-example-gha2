@@ -1,10 +1,16 @@
-# Amplify Integration Project Deployment Job DevOps Pipeline Example using GitHub Actions
+# Amplify Fusion Project Deployment Job DevOps Pipeline Example using GitHub Actions
 
-An example of how to use GitHub Actions and the [Amplify Integration CLI](https://confluence.axway.com/display/DX/Amplify+Integration+CLI#AmplifyIntegrationCLI-Overrideconnection) to promote a project from DESIGN to LIVE using Deployment Jobs. A version using Project export/import can be found [here](https://github.com/lbrenman/af-deploy-to-live-devops-pipeline-example-gha3?tab=readme-ov-file).
+An example of how to use GitHub Actions and the [Amplify Fusion CLI](https://gist.github.com/lbrenman/bbccf548554fde48c7aa268256db7b96) to promote a project from DESIGN to LIVE using Deployment Jobs. A version using Project export/import can be found [here](https://github.com/lbrenman/af-deploy-to-live-devops-pipeline-example-gha3).
+
+The DevOps flow is as follows:
+* Developer versions their project in the UI when ready to promote, runs the `export_and_gitpush.sh` script which will export the project version and unzip it and push it to the Github repo
+* The project check in in Github triggers the Github action which promotes the project to LIVE, overrides the connection with LIVE (Production) credentials and enables the integration
+* The following diagram illustrates this flow:
+  ![Image](https://i.imgur.com/1Cc6Na5.png)
 
 A demo video can be found [here]()
 
-The Pipeline was tested and developed with CLI version 1.9.
+The Pipeline was tested and developed with CLI version 1.9.1.
 
 ## Amplify Integration Project
 
@@ -30,10 +36,3 @@ Preparation:
     * Replace the credentials in the connection export with environment variables as we assign github secrets to these env variables in the pipeline
       ![Image](https://i.imgur.com/Q6f5LcS.png)
   * The Github action contained in `.github/workflows/deploymentpipeline.yml`. It will run and promote the project to LIVE whenever you check your project in (Push Origin)
-
-DevOps Flow:
-* Developer versions their project in the UI when ready to promote, exports the project, and updates the manifest folder with the new version number
-  * Can export project using the UI or using the CLI (e.g. `ampint project export -n LBclitest -pv V14`)
-* Developer pushes the updates to Github
-* Project check in triggers the Github action which promotes the project to LIVE, overrides the connection with LIVE (Production) credentials and enables the integration
-    ![Image](https://i.imgur.com/SHZeDjq.png)
