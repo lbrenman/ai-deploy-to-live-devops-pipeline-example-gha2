@@ -1,6 +1,6 @@
 # Amplify Integration Project Deployment Job DevOps Pipeline Example using GitHub Actions
 
-An example of how to use GitHub Actions and the [Amplify Integration CLI](https://confluence.axway.com/display/DX/Amplify+Integration+CLI#AmplifyIntegrationCLI-Overrideconnection) to promote a project from DESIGN to LIVE.
+An example of how to use GitHub Actions and the [Amplify Integration CLI](https://confluence.axway.com/display/DX/Amplify+Integration+CLI#AmplifyIntegrationCLI-Overrideconnection) to promote a project from DESIGN to LIVE using Deployment Jobs. A version using Project export/import can be found [here](https://github.com/lbrenman/af-deploy-to-live-devops-pipeline-example-gha3?tab=readme-ov-file).
 
 A demo video can be found [here]()
 
