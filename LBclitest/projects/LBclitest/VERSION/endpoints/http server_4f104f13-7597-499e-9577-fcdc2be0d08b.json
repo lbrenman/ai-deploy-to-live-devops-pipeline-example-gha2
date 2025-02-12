@@ -17,10 +17,10 @@
     "null" : false
   },
   "avatar_id" : null,
-  "tag" : "V55",
+  "tag" : "V56",
   "active" : false,
   "is_changed" : false,
-  "comment" : "Upgrade to V55",
+  "comment" : "Update to V56",
   "is_error" : false,
-  "base_tag" : "V54"
+  "base_tag" : "V55"
 }
